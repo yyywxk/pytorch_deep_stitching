@@ -239,6 +239,7 @@ class Trainer(object):
                 (batch_out['warp_mesh'][0]+1.)/2., 
                 self.args.glob_iter
             )
+
     def _log_losses_to_tensorboard(self, losses, names):
         """Log individual losses to tensorboard"""
         # Log learning rate
@@ -305,7 +306,7 @@ class Trainer(object):
                     )
                 loss_names = ['overlap_loss1', 'overlap_loss2', 'nonoverlap_loss']
             else:
-                raise RuntimeError("=> Model {} not supported".format(self.model))
+                raise RuntimeError("=> Model {} not supported".format(self.args.model))
 
             if torch.isnan(total_loss):
                 myprint(self.logging, f"NaN loss detected at epoch {epoch+1}")
