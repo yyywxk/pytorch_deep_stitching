@@ -23,7 +23,7 @@
 
 ## Introduction
 
-This is the a PyTorch reimplementation of following papers:
+This is the PyTorch reimplementation of following papers:
 
 - UDIS: [Unsupervised Deep Image Stitching: Reconstructing Stitched Features to Images](http://arxiv.org/abs/2106.12859) [TIP 2021]
 
