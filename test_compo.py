@@ -36,7 +36,7 @@ def parse_args():
     # --------------------------------- Base Settings ----------------------------
     parser.add_argument('--dataset', type=str, default='UDIS-D',
                         choices=['UDIS-D', 'UDAIS-D', 'UDAIS-D+', 'MS-COCO'],
-                        help='dataset name (default: UDIS)')
+                        help='dataset name (default: UDIS-D)')
     parser.add_argument('--test_path', type=str,
                         default='./Warp/UDAIS-D/UDIS2/align/testing/',
                         help='your data path for testing after stage 1')

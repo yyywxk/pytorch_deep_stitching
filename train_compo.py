@@ -47,7 +47,7 @@ def parse_args():
                         help='main function name')
     parser.add_argument('--dataset', type=str, default='UDIS-D',
                         choices=['UDIS-D', 'UDAIS-D', 'UDAIS-D+', 'MS-COCO'],
-                        help='dataset name (default: UDIS)')
+                        help='dataset name (default: UDIS-D)')
     parser.add_argument('--train_path', type=str,
                         default='./Warp/UDIS-D/UDIS2/align/training/',
                         help='your data path for training after stage 1')

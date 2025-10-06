@@ -43,7 +43,7 @@ def parse_args():
     # --------------------------------- Base Settings ----------------------------
     parser.add_argument('--dataset', type=str, default='UDIS-D',
                         choices=['UDIS-D', 'UDAIS-D', 'UDAIS-D+', 'MS-COCO'],
-                        help='dataset name (default: UDIS)')
+                        help='dataset name (default: UDIS-D)')
     parser.add_argument('--model', type=str, default='UDIS2',
                         choices=['UDIS', 'UDIS2'],
                         help='model name (default: UDIS2)')
@@ -182,6 +182,7 @@ class Tester(object):
         self.crashed = 0
         self.crashed_name = []
         self.net.eval()
+        
     def test_output(self):
         print("=================== Test output mode! ==================")
         # create folders if it dose not exist
@@ -653,6 +654,7 @@ class Tester(object):
             cv2.imwrite(path, warp1_mask)
             path = self.args.path_mask2 + name
             cv2.imwrite(path, warp2_mask)
+
 
 def main(args):
     print('Start testing!')
